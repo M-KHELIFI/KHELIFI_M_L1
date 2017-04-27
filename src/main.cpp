@@ -19,7 +19,7 @@ float linear_classifier(float*W, float* X){
 	if (d>=0) return 1;
 	else return -1;
 }
-const int K= 100;
+const int K= 10;
 float A[K][784];
 float B[K][784];
 
@@ -65,7 +65,7 @@ int* n=new int [K];
 
 		}
 		for(int k=0;k<K;k++){
-			save_jpg(A[k], 28 ,28,"%u/%04u.jpg", t, k);
+			save_jpg(A[k],28,28,"%u/%04u.jpg", k, t);
 		}	
 	}
 
